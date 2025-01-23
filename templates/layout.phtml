@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MVC toujours plus haut</title>
+</head>
+
+<body>
+  <?php
+  switch ($route) {
+    case 'show_user':
+      require './show.phtml';
+      break;
+    case 'create_user':
+      require './create.phtml';
+      break;
+
+    case 'update_user':
+      require './update.phtml';
+      break;
+
+    default:
+      require './list.phtml';
+      break;
+  }
+  ?>
+</body>
+
+</html>
