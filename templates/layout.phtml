@@ -5,24 +5,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MVC toujours plus haut</title>
+  <link rel="stylesheet" href="./assets/styles/style.css">
 </head>
 
 <body>
+
+  <nav>
+    <li><a href="index.php?route=list_user">List of users</a></li>
+    <li><a href="index.php?route=create_user">Create a new user</a></li>
+  </nav>
+
   <?php
   switch ($route) {
     case 'show_user':
-      require './show.phtml';
+      require './templates/users/show.phtml';
       break;
     case 'create_user':
-      require './create.phtml';
+      require './templates/users/create.phtml';
       break;
 
     case 'update_user':
-      require './update.phtml';
+      require './templates/users/update.phtml';
       break;
 
     default:
-      require './list.phtml';
+      require './templates/users/list.phtml';
       break;
   }
   ?>

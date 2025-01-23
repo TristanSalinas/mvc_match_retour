@@ -5,21 +5,34 @@ class Router
 
   public function routing($get)
   {
-    switch ($get) {
+    $route = $get['route'] ?? null;
+
+
+    switch ($route) {
+
       case 'show_user':
-        new UserController()->show();
+        (new UserController())->show();
+        break;
       case 'create_user':
-        return 'create';
-      case 'check_create_user':
-        return 'checkCreate';
+        (new UserController())->create();
+        break;
       case 'update_user':
-        return 'update';
+        (new UserController())->update();
+        break;
+
+      case 'check_create_user':
+        (new UserController())->checkCreate();
+        break;
       case 'check_update_user':
-        return 'checkUpdate';
+        (new UserController())->checkUpdate();
+        break;
       case 'delete_user':
-        return 'delete';
+        (new UserController())->delete();
+
+
       default:
-        return 'list';
+        (new UserController())->list();
+        break;
     }
   }
 }

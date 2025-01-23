@@ -1,0 +1,17 @@
+<main>
+  <h1>Modify a user already in the dataBase</h1>
+
+  <form action="index.php?route=check_update_user" method="post">
+    <input type="hidden" type="int" name="id" id="id" value="<?php echo $user->getId(); ?>">
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" value="<?php echo $user->getEmail(); ?>">
+    <br />
+    <label for="first_name">First Name</label>
+    <input type="text" name="first_name" id="first_name" value="<?php echo $user->getFirst_Name(); ?>">
+    <br />
+    <label for="last_name">Last Name</label>
+    <input type="text" name="last_name" id="last_name" value="<?php echo $user->getLast_Name(); ?>">
+    <br />
+    <button type="submit">Modify</button>
+  </form>
+</main>
