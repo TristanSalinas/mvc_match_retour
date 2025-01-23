@@ -16,14 +16,14 @@
   </nav>
 
   <?php
-  switch ($route) {
+
+  switch ($layoutContent) {
     case 'show_user':
       require './templates/users/show.phtml';
       break;
     case 'create_user':
       require './templates/users/create.phtml';
       break;
-
     case 'update_user':
       require './templates/users/update.phtml';
       break;

@@ -7,11 +7,14 @@ main {
   max-width: 800px;
   margin-inline: auto;
   background-color: white;
+  padding: 1rem;
+
+  padding-bottom: 5rem;
 }
 
 h1 {
   text-align: center;
-  margin-top: 0;
+  margin-block: 5rem;
 }
 nav {
   width: 100%;

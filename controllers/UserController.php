@@ -1,34 +1,38 @@
 <?php
 class UserController
 {
+  // /!\ If layout is required it need $layoutContent variable to know what to render.
+
+  //never used :P for now
   public function show()
   {
-    $route = 'show_user';
+    $layoutContent = 'show_user';
     require '../templates/layout.phtml';
   }
   public function create()
   {
-    $route = 'create_user';
+    $layoutContent = 'create_user';
     require './templates/layout.phtml';
   }
 
   public function update()
   {
-    $route = 'update_user';
+    $layoutContent = 'update_user';
     $user = (new UserManager)->findUserById($_GET['id']);
-    var_dump($user);
     require './templates/layout.phtml';
   }
 
   public function list()
   {
-    $route = 'list_user';
+
+    $layoutContent = 'list_user';
     $users = (new UserManager())->findAllUsers();
     require './templates/layout.phtml';
   }
 
   public function checkUpdate()
   {
+
     $user = new User($_POST['email'], $_POST['first_name'], $_POST['last_name']);
     $user->setId($_POST['id']);
     (new UserManager())->updateUser($user);
