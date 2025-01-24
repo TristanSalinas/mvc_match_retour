@@ -7,10 +7,10 @@
         <p><?php echo $user['email']; ?></p>
         <p><?php echo $user['first_name']; ?></p>
         <p><?php echo $user['last_name']; ?></p>
-        <a class="update" href="index.php?route=update_user&id=<?php echo $user['id']; ?>">Update</a>
+        <a class="update" href="index.php?route=update_user_form&id=<?php echo $user['id']; ?>">Update</a>
         <a class="delete" href="index.php?route=delete_user&id=<?php echo $user['id']; ?>">Delete</a>
       </div>
     <?php endforeach; ?>
-    <div class="add-new"><a href="index.php?route=create_user">Add A new user</a></div>
+    <div class="add-new"><a href="index.php?route=create_user_form">Add A new user</a></div>
   </div>
 </main>

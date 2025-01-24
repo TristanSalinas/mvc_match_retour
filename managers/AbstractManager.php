@@ -11,7 +11,6 @@ class AbstractManager
     $dbUser = 'root';
     $dbPassword = '';
 
-
     try {
       $dsn = "mysql:host=$dbHost;dbname=$dbName";
       $this->db = new PDO($dsn, $dbUser, $dbPassword);

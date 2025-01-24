@@ -1,6 +1,4 @@
 <?php
-
-
 class UserManager extends AbstractManager
 {
   public function createUser(User $user): void

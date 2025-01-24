@@ -12,24 +12,24 @@
 
   <nav>
     <li><a href="index.php?route=list_user">List of users</a></li>
-    <li><a href="index.php?route=create_user">Create a new user</a></li>
+    <li><a href="index.php?route=create_user_form">Create a new user</a></li>
   </nav>
 
   <?php
-
+  // contenu du body dynamique en fonction de $layoutContent, ça veux dire cependant qu'on se contraint 
+  // à declarer $layoutContent avant de require ce fichier.
   switch ($layoutContent) {
-    case 'show_user':
-      require './templates/users/show.phtml';
-      break;
-    case 'create_user':
+
+    case 'create_user_form':
       require './templates/users/create.phtml';
       break;
-    case 'update_user':
+    case 'update_user_form':
       require './templates/users/update.phtml';
       break;
-
-    default:
+    case 'list_user':
       require './templates/users/list.phtml';
+    default:
+
       break;
   }
   ?>
